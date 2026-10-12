@@ -1,0 +1,7 @@
+sample,fastq_1,fastq_2,condition
+control_1,control_1_R1.fastq.gz,control_1_R2.fastq.gz,control
+control_2,control_2_R1.fastq.gz,control_2_R2.fastq.gz,control
+control_3,control_3_R1.fastq.gz,control_3_R2.fastq.gz,control
+case_1,case_1_R1.fastq.gz,case_1_R2.fastq.gz,case
+case_2,case_2_R1.fastq.gz,case_2_R2.fastq.gz,case
+case_3,case_3_R1.fastq.gz,case_3_R2.fastq.gz,case
