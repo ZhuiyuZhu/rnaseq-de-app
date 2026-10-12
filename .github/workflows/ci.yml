@@ -11,7 +11,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Generate synthetic validation data
-        run: python scripts/make_test_data.py --out data --reads 4000 --seed 7
+        run: python scripts/make_test_data.py --out data --reads 40000 --seed 42
       - name: Run pipeline
         run: >
           python run_pipeline.py
@@ -20,6 +20,7 @@ jobs:
           --transcriptome data/ref/transcriptome.fa
           --outdir results_ci
           --de-backend ttest
+          --cond-a control --cond-b case
       - name: Validate against ground truth
         run: python scripts/validate_results.py results_ci/de/de_results.csv data/ground_truth.json
       - name: Pytest
